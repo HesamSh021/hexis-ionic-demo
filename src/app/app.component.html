@@ -1,0 +1,29 @@
+<ion-app>
+  <ion-header class="ion-margin-bottom">
+    <ion-toolbar>
+      <ion-buttons slot="end">
+        <ion-menu-button id="main"></ion-menu-button>
+      </ion-buttons>
+      <img src="../assets/images/hexis-logo.png" alt="hexis-app-logo" class="ion-padding" style="width: 140px;">
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-menu side="end" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="secondary">
+        <ion-title>Hexis App</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+        <ion-item>Menu Item</ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet></ion-router-outlet>
+</ion-app>

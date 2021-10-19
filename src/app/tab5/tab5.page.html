@@ -1,0 +1,141 @@
+<ion-header [translucent]="true" class="ion-margin-bottom">
+  <ion-toolbar>
+    <!-- <ion-title>
+      Tab 5
+    </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-top">
+
+  <ion-slides pager="false" [options]="slideOpts" #calendarslides>
+
+    <ion-slide>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="2">
+                  <ion-icon name="chevron-back-circle-outline" size="large" (click)="swipeBack()"></ion-icon>
+                </ion-col>
+                <ion-col size="8"><b>Tuesday</b> 1st Jun</ion-col>
+                <ion-col size="2">
+                  <ion-icon name="chevron-forward-circle-outline" size="large" (click)="swipeNext()"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-col size="12"> <!--YOU CAN LOOP OVER THESE WITH ANGULAR *ngFor WHEN GOT THE DATA FROM SERVER-->
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="3">
+                    <ion-text><h6><b>Snack</b></h6></ion-text>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">High</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="red-cal">Low</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="red-cal">Low</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+
+            <ion-col size="12">
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="3">
+                    <ion-text><h6><b>Lunch</b></h6></ion-text>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">High</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="yellow-cal">Med</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">high</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-grid>
+              <ion-row class="ion-align-items-center">
+                <ion-col size="2">
+                  <ion-icon name="chevron-back-circle-outline" size="large" (click)="swipeBack()"></ion-icon>
+                </ion-col>
+                <ion-col size="8"><b>Wednesday</b> 2nd Jun</ion-col>
+                <ion-col size="2">
+                  <ion-icon name="chevron-forward-circle-outline" size="large" (click)="swipeNext()"></ion-icon>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+
+            <ion-col size="12"> <!--YOU CAN LOOP OVER THESE WITH ANGULAR *ngFor WHEN GOT THE DATA FROM SERVER-->
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="3">
+                    <ion-text><h6><b>Lunch</b></h6></ion-text>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">High</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="yellow-cal">Med</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="red-cal">Low</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+
+
+            <ion-col size="12">
+              <ion-grid>
+                <ion-row class="ion-align-items-center">
+                  <ion-col size="3">
+                    <ion-text><h6><b>Dinner</b></h6></ion-text>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">High</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="green-cal">High</div>
+                  </ion-col>
+                  <ion-col size="3">
+                    <div class="red-cal">Low</div>
+                  </ion-col>
+                </ion-row>
+              </ion-grid>
+            </ion-col>
+
+
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+  </ion-slides>
+
+  <!-- <app-explore-container name="Tab 5 page"></app-explore-container> -->
+</ion-content>

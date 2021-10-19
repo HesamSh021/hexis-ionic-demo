@@ -1,0 +1,144 @@
+<ion-header [translucent]="true" class="ion-margin-bottom">
+  <ion-toolbar>
+    <!-- <ion-title>
+      Tab 3
+    </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-margin-top">
+  <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="day">
+      <ion-label>Day</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="week">
+      <ion-label>Week</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <div [ngSwitch]="segment">
+    <ng-container *ngSwitchCase="'day'">
+      <ion-grid class="ion-padding">
+        <ion-row class="ion-align-items-center">
+          <ion-text><b>Tuesday</b> 1st Jun</ion-text>
+          <ion-icon name="pencil" size="small" class="ion-margin-start"></ion-icon>
+        </ion-row>
+      </ion-grid>
+
+      <ion-list>
+
+        <ion-item (click)="showMore['Breakfast']=!showMore['Breakfast']">
+          <ion-grid>
+            <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-col size="2">
+                <ion-icon name="checkmark-circle-outline" size="large"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+                <div class="accordion-item green" [class.active]="showMore['Breakfast']">
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center ion-justify-content-between">
+                      <ion-text><h2>Breakfast</h2></ion-text>
+                      <ion-icon name="chevron-{{showMore['Breakfast'] ? 'up' : 'down'}}-outline" size="large"></ion-icon>
+                    </ion-row>
+                  </ion-grid>
+                  <p>breakfast text breakfast text breakfast text breakfast text</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+        <ion-item (click)="showMore['Lunch']=!showMore['Lunch']">
+          <ion-grid>
+            <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-col size="2">
+                <ion-icon name="checkmark-circle-outline" size="large"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+                <div class="accordion-item green" [class.active]="showMore['Lunch']">
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center ion-justify-content-between">
+                      <ion-text><h2>Lunch</h2></ion-text>
+                      <ion-icon name="chevron-{{showMore['Lunch'] ? 'up' : 'down'}}-outline" size="large"></ion-icon>
+                    </ion-row>
+                  </ion-grid>
+                  <p>lunch text lunch text lunch text lunch text lunch text lunch text lunch text lunch text</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+        <ion-item (click)="showMore['Snack']=!showMore['Snack']">
+          <ion-grid>
+            <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-col size="2">
+                <ion-icon name="ellipse-outline" size="large"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+                <div class="accordion-item yellow" [class.active]="showMore['Snack']">
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center ion-justify-content-between">
+                      <ion-text><h2>PM Snack</h2></ion-text>
+                      <ion-icon name="chevron-{{showMore['Snack'] ? 'up' : 'down'}}-outline" size="large"></ion-icon>
+                    </ion-row>
+                  </ion-grid>
+                  <p>snack text snack text snack text snack text snack text snack text snack text snack text snack text snack text snack text</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+        <ion-item (click)="showMore['Dinner']=!showMore['Dinner']">
+          <ion-grid>
+            <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-col size="2">
+                <ion-icon name="ellipse-outline" size="large"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+                <div class="accordion-item red" [class.active]="showMore['Dinner']">
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center ion-justify-content-between">
+                      <ion-text><h2>Dinner</h2></ion-text>
+                      <ion-icon name="chevron-{{showMore['Dinner'] ? 'up' : 'down'}}-outline" size="large"></ion-icon>
+                    </ion-row>
+                  </ion-grid>
+                  <p>dinner text dinner text</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+        <ion-item (click)="showMore['Bed']=!showMore['Bed']">
+          <ion-grid>
+            <ion-row class="ion-justify-content-between ion-align-items-center">
+              <ion-col size="2">
+                <ion-icon name="ellipse-outline" size="large"></ion-icon>
+              </ion-col>
+              <ion-col size="10">
+                <div class="accordion-item red" [class.active]="showMore['Bed']">
+                  <ion-grid>
+                    <ion-row class="ion-align-items-center ion-justify-content-between">
+                      <ion-text><h2>Pre Bed Snack</h2></ion-text>
+                      <ion-icon name="chevron-{{showMore['Bed'] ? 'up' : 'down'}}-outline" size="large"></ion-icon>
+                    </ion-row>
+                  </ion-grid>
+                  <p>bed text bed text bed text bed text bed text bed text bed text bed text</p>
+                </div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-item>
+
+      </ion-list>
+    </ng-container>
+
+    <ion-list *ngSwitchCase="'week'">
+      <ion-item>WEEK</ion-item>
+    </ion-list>
+  </div>
+
+  <!-- <app-explore-container name="Tab 3 page"></app-explore-container> -->
+</ion-content>

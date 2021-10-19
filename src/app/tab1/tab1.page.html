@@ -1,0 +1,130 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <!-- <ion-title>
+      Tab 1
+    </ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding-top">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title class="ion-text-center ion-padding-bottom">Recepies</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-grid>
+    <ion-row class="ion-justify-content-around ion-align-items-center">
+      <div class="carb-cat red" [class.active]="currentIndex==0" (click)="slideTo(carbslides,0)">Low Carb<br><b>Guide</b></div>
+      <div class="carb-cat yellow" [class.active]="currentIndex==1" (click)="slideTo(carbslides,1)">Medium Carb<br><b>Guide</b></div>
+      <div class="carb-cat green" [class.active]="currentIndex==2" (click)="slideTo(carbslides,2)">High Carb<br><b>Guide</b></div>
+    </ion-row>
+  </ion-grid>
+  
+  <ion-slides pager="false" [options]="slideOpts" #carbslides (ionSlideDidChange)="setIndex()">
+
+    <ion-slide>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Breakfast</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb1.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Lunch</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb2.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Lunch</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb3.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Lunch</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb4.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Snacks</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb5.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+    <ion-slide>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6">
+            <ion-card class="carbs">
+              <ion-card-header>
+                <!-- <ion-card-title>breakfast main</ion-card-title> -->
+                <ion-card-subtitle>Breakfast</ion-card-subtitle>
+              </ion-card-header>
+
+              <ion-card-content>
+                <img src="../../assets/images/recepies/carb6.jpg">
+              </ion-card-content>
+            </ion-card>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-slide>
+
+  </ion-slides>
+
+  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+</ion-content>
